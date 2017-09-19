@@ -1,4 +1,5 @@
 ﻿using MetroFramework.Forms;
+using NodaTime;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,28 +15,28 @@ namespace simpletimer
 {
     public partial class MainForm : MetroForm
     {
-        string timestring1 = "00:05:00";
-        string timestring2 = "00:10:00";
-        DateTime time1;  
-        DateTime time2; 
+        private PeriodBuilder pbuilder = new PeriodBuilder();
+        private Period p1, p2;
 
         public MainForm()
         {
-            InitializeComponent(); 
+            InitializeComponent();
+        }
+
+        //functions. Too lazy for a seperate class
+        private void buildTimer()
+        {
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            timestring1 = "00:05:00";
-            timestring2 = "00:10:00";
-            time1 = DateTime.ParseExact(timestring1, "HH:mm:ss", CultureInfo.InvariantCulture);
-            time2 = DateTime.ParseExact(timestring2, "HH:mm:ss", CultureInfo.InvariantCulture);
+
         }
 
         private void cmdTimer1_Click(object sender, EventArgs e)
         {
-            time1.Subtract(DateTime.Now);
-            MessageBox.Show(time1.ToString());
+
         }
 
         private void cmdTimer2_Click(object sender, EventArgs e)
@@ -45,20 +46,64 @@ namespace simpletimer
 
         private void cmdSetTime1_Click(object sender, EventArgs e)
         {
-            if (txtBoxTime1.Text != "")
+            if(time1_days.Text != "")
             {
-                timestring1 = txtBoxTime1.Text;
-                time1 = DateTime.ParseExact(timestring1, "HH:mm:ss", CultureInfo.InvariantCulture);
+                pbuilder.Days = Convert.ToInt32(time1_days.Text);
             }
+
+            if(time1_hours.Text != "")
+            {
+                pbuilder.Hours = Convert.ToInt32(time1_hours.Text);
+            }
+
+            if(time1_minutes.Text != "")
+            {
+                pbuilder.Minutes = Convert.ToInt32(time1_minutes.Text);
+            }
+
+            if(time1_seconds.Text != "")
+            {
+                pbuilder.Seconds = Convert.ToInt32(time1_seconds.Text);
+            }
+
+            p1 = pbuilder.Build();
+
         }
 
         private void cmdSetTime2_Click(object sender, EventArgs e)
         {
-            if (txtBoxTime2.Text != "")
+            if (time2_days.Text != "")
             {
-                timestring2 = txtBoxTime1.Text;
-                time2 = DateTime.ParseExact(timestring2, "HH:mm:ss", CultureInfo.InvariantCulture);
+                pbuilder.Days = Convert.ToInt32(time2_days.Text);
             }
+
+            if (time2_hours.Text != "")
+            {
+                pbuilder.Hours = Convert.ToInt32(time2_hours.Text);
+            }
+
+            if (time2_minutes.Text != "")
+            {
+                pbuilder.Minutes = Convert.ToInt32(time2_minutes.Text);
+            }
+
+            if (time2_seconds.Text != "")
+            {
+                pbuilder.Seconds = Convert.ToInt32(time2_seconds.Text);
+            }
+
+            p2 = pbuilder.Build();
+
+        }
+
+        private void timer1_playsound_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer2_playsound_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
