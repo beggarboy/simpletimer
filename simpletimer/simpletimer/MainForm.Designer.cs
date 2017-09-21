@@ -56,6 +56,22 @@
             this.timer2_showWindowsToast = new MetroFramework.Controls.MetroCheckBox();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.timer1_days = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
+            this.timer1_hours = new MetroFramework.Controls.MetroLabel();
+            this.timer1_minutes = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
+            this.timer1_seconds = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.timer2_seconds = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel21 = new MetroFramework.Controls.MetroLabel();
+            this.timer2_minutes = new MetroFramework.Controls.MetroLabel();
+            this.timer2_hours = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
+            this.timer2_days = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -73,14 +89,14 @@
             // timer1_timepassed
             // 
             this.timer1_timepassed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.timer1_timepassed.AutoSize = true;
             this.timer1_timepassed.ForeColor = System.Drawing.SystemColors.Control;
-            this.timer1_timepassed.Location = new System.Drawing.Point(147, 400);
+            this.timer1_timepassed.Location = new System.Drawing.Point(164, 400);
             this.timer1_timepassed.Name = "timer1_timepassed";
-            this.timer1_timepassed.Size = new System.Drawing.Size(81, 19);
+            this.timer1_timepassed.Size = new System.Drawing.Size(79, 19);
             this.timer1_timepassed.Style = MetroFramework.MetroColorStyle.Orange;
             this.timer1_timepassed.TabIndex = 2;
-            this.timer1_timepassed.Text = "------------";
+            this.timer1_timepassed.Text = "- - -";
+            this.timer1_timepassed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.timer1_timepassed.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.timer1_timepassed.UseStyleColors = true;
             // 
@@ -127,15 +143,14 @@
             // timer2_timepassed
             // 
             this.timer2_timepassed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.timer2_timepassed.AutoSize = true;
             this.timer2_timepassed.ForeColor = System.Drawing.SystemColors.Control;
             this.timer2_timepassed.Location = new System.Drawing.Point(399, 400);
             this.timer2_timepassed.Name = "timer2_timepassed";
             this.timer2_timepassed.Size = new System.Drawing.Size(75, 19);
             this.timer2_timepassed.Style = MetroFramework.MetroColorStyle.Orange;
             this.timer2_timepassed.TabIndex = 6;
-            this.timer2_timepassed.Text = "-----------";
-            this.timer2_timepassed.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.timer2_timepassed.Text = "- - -";
+            this.timer2_timepassed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.timer2_timepassed.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.timer2_timepassed.UseStyleColors = true;
             // 
@@ -577,11 +592,259 @@
             this.metroLabel10.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel10.UseCustomBackColor = true;
             // 
+            // timer1_days
+            // 
+            this.timer1_days.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.timer1_days.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.timer1_days.ForeColor = System.Drawing.Color.Black;
+            this.timer1_days.Location = new System.Drawing.Point(61, 246);
+            this.timer1_days.Name = "timer1_days";
+            this.timer1_days.Size = new System.Drawing.Size(43, 25);
+            this.timer1_days.Style = MetroFramework.MetroColorStyle.Orange;
+            this.timer1_days.TabIndex = 35;
+            this.timer1_days.Text = "d";
+            this.timer1_days.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.timer1_days.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel12
+            // 
+            this.metroLabel12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.metroLabel12.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel12.ForeColor = System.Drawing.Color.Black;
+            this.metroLabel12.Location = new System.Drawing.Point(110, 246);
+            this.metroLabel12.Name = "metroLabel12";
+            this.metroLabel12.Size = new System.Drawing.Size(25, 25);
+            this.metroLabel12.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroLabel12.TabIndex = 38;
+            this.metroLabel12.Text = "d";
+            this.metroLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel12.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // timer1_hours
+            // 
+            this.timer1_hours.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.timer1_hours.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.timer1_hours.ForeColor = System.Drawing.Color.Black;
+            this.timer1_hours.Location = new System.Drawing.Point(144, 246);
+            this.timer1_hours.Name = "timer1_hours";
+            this.timer1_hours.Size = new System.Drawing.Size(43, 25);
+            this.timer1_hours.Style = MetroFramework.MetroColorStyle.Orange;
+            this.timer1_hours.TabIndex = 39;
+            this.timer1_hours.Text = "h";
+            this.timer1_hours.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.timer1_hours.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // timer1_minutes
+            // 
+            this.timer1_minutes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.timer1_minutes.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.timer1_minutes.ForeColor = System.Drawing.Color.Black;
+            this.timer1_minutes.Location = new System.Drawing.Point(61, 291);
+            this.timer1_minutes.Name = "timer1_minutes";
+            this.timer1_minutes.Size = new System.Drawing.Size(43, 25);
+            this.timer1_minutes.Style = MetroFramework.MetroColorStyle.Orange;
+            this.timer1_minutes.TabIndex = 40;
+            this.timer1_minutes.Text = "m";
+            this.timer1_minutes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.timer1_minutes.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel15
+            // 
+            this.metroLabel15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.metroLabel15.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel15.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel15.ForeColor = System.Drawing.Color.Black;
+            this.metroLabel15.Location = new System.Drawing.Point(106, 291);
+            this.metroLabel15.Name = "metroLabel15";
+            this.metroLabel15.Size = new System.Drawing.Size(28, 25);
+            this.metroLabel15.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroLabel15.TabIndex = 41;
+            this.metroLabel15.Text = "m";
+            this.metroLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel15.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel16
+            // 
+            this.metroLabel16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.metroLabel16.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel16.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel16.ForeColor = System.Drawing.Color.Black;
+            this.metroLabel16.Location = new System.Drawing.Point(190, 246);
+            this.metroLabel16.Name = "metroLabel16";
+            this.metroLabel16.Size = new System.Drawing.Size(28, 25);
+            this.metroLabel16.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroLabel16.TabIndex = 42;
+            this.metroLabel16.Text = "h";
+            this.metroLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel16.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel17
+            // 
+            this.metroLabel17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.metroLabel17.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel17.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel17.ForeColor = System.Drawing.Color.Black;
+            this.metroLabel17.Location = new System.Drawing.Point(193, 291);
+            this.metroLabel17.Name = "metroLabel17";
+            this.metroLabel17.Size = new System.Drawing.Size(28, 25);
+            this.metroLabel17.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroLabel17.TabIndex = 44;
+            this.metroLabel17.Text = "s";
+            this.metroLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel17.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // timer1_seconds
+            // 
+            this.timer1_seconds.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.timer1_seconds.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.timer1_seconds.ForeColor = System.Drawing.Color.Black;
+            this.timer1_seconds.Location = new System.Drawing.Point(144, 291);
+            this.timer1_seconds.Name = "timer1_seconds";
+            this.timer1_seconds.Size = new System.Drawing.Size(43, 25);
+            this.timer1_seconds.Style = MetroFramework.MetroColorStyle.Orange;
+            this.timer1_seconds.TabIndex = 43;
+            this.timer1_seconds.Text = "s";
+            this.timer1_seconds.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.timer1_seconds.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel11
+            // 
+            this.metroLabel11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.metroLabel11.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel11.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel11.ForeColor = System.Drawing.Color.Black;
+            this.metroLabel11.Location = new System.Drawing.Point(447, 291);
+            this.metroLabel11.Name = "metroLabel11";
+            this.metroLabel11.Size = new System.Drawing.Size(28, 25);
+            this.metroLabel11.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroLabel11.TabIndex = 52;
+            this.metroLabel11.Text = "s";
+            this.metroLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel11.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // timer2_seconds
+            // 
+            this.timer2_seconds.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.timer2_seconds.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.timer2_seconds.ForeColor = System.Drawing.Color.Black;
+            this.timer2_seconds.Location = new System.Drawing.Point(398, 291);
+            this.timer2_seconds.Name = "timer2_seconds";
+            this.timer2_seconds.Size = new System.Drawing.Size(43, 25);
+            this.timer2_seconds.Style = MetroFramework.MetroColorStyle.Orange;
+            this.timer2_seconds.TabIndex = 51;
+            this.timer2_seconds.Text = "s";
+            this.timer2_seconds.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.timer2_seconds.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel20
+            // 
+            this.metroLabel20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.metroLabel20.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel20.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel20.ForeColor = System.Drawing.Color.Black;
+            this.metroLabel20.Location = new System.Drawing.Point(444, 246);
+            this.metroLabel20.Name = "metroLabel20";
+            this.metroLabel20.Size = new System.Drawing.Size(28, 25);
+            this.metroLabel20.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroLabel20.TabIndex = 50;
+            this.metroLabel20.Text = "h";
+            this.metroLabel20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel20.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel21
+            // 
+            this.metroLabel21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.metroLabel21.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel21.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel21.ForeColor = System.Drawing.Color.Black;
+            this.metroLabel21.Location = new System.Drawing.Point(360, 291);
+            this.metroLabel21.Name = "metroLabel21";
+            this.metroLabel21.Size = new System.Drawing.Size(28, 25);
+            this.metroLabel21.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroLabel21.TabIndex = 49;
+            this.metroLabel21.Text = "m";
+            this.metroLabel21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel21.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // timer2_minutes
+            // 
+            this.timer2_minutes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.timer2_minutes.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.timer2_minutes.ForeColor = System.Drawing.Color.Black;
+            this.timer2_minutes.Location = new System.Drawing.Point(315, 291);
+            this.timer2_minutes.Name = "timer2_minutes";
+            this.timer2_minutes.Size = new System.Drawing.Size(43, 25);
+            this.timer2_minutes.Style = MetroFramework.MetroColorStyle.Orange;
+            this.timer2_minutes.TabIndex = 48;
+            this.timer2_minutes.Text = "m";
+            this.timer2_minutes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.timer2_minutes.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // timer2_hours
+            // 
+            this.timer2_hours.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.timer2_hours.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.timer2_hours.ForeColor = System.Drawing.Color.Black;
+            this.timer2_hours.Location = new System.Drawing.Point(398, 246);
+            this.timer2_hours.Name = "timer2_hours";
+            this.timer2_hours.Size = new System.Drawing.Size(43, 25);
+            this.timer2_hours.Style = MetroFramework.MetroColorStyle.Orange;
+            this.timer2_hours.TabIndex = 47;
+            this.timer2_hours.Text = "h";
+            this.timer2_hours.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.timer2_hours.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel24
+            // 
+            this.metroLabel24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.metroLabel24.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel24.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel24.ForeColor = System.Drawing.Color.Black;
+            this.metroLabel24.Location = new System.Drawing.Point(364, 246);
+            this.metroLabel24.Name = "metroLabel24";
+            this.metroLabel24.Size = new System.Drawing.Size(25, 25);
+            this.metroLabel24.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroLabel24.TabIndex = 46;
+            this.metroLabel24.Text = "d";
+            this.metroLabel24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel24.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // timer2_days
+            // 
+            this.timer2_days.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.timer2_days.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.timer2_days.ForeColor = System.Drawing.Color.Black;
+            this.timer2_days.Location = new System.Drawing.Point(315, 246);
+            this.timer2_days.Name = "timer2_days";
+            this.timer2_days.Size = new System.Drawing.Size(43, 25);
+            this.timer2_days.Style = MetroFramework.MetroColorStyle.Orange;
+            this.timer2_days.TabIndex = 45;
+            this.timer2_days.Text = "d";
+            this.timer2_days.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.timer2_days.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 439);
+            this.Controls.Add(this.metroLabel11);
+            this.Controls.Add(this.timer2_seconds);
+            this.Controls.Add(this.metroLabel20);
+            this.Controls.Add(this.metroLabel21);
+            this.Controls.Add(this.timer2_minutes);
+            this.Controls.Add(this.timer2_hours);
+            this.Controls.Add(this.metroLabel24);
+            this.Controls.Add(this.timer2_days);
+            this.Controls.Add(this.metroLabel17);
+            this.Controls.Add(this.timer1_seconds);
+            this.Controls.Add(this.metroLabel16);
+            this.Controls.Add(this.metroLabel15);
+            this.Controls.Add(this.timer1_minutes);
+            this.Controls.Add(this.timer1_hours);
+            this.Controls.Add(this.metroLabel12);
+            this.Controls.Add(this.timer1_days);
             this.Controls.Add(this.metroLabel10);
             this.Controls.Add(this.metroLabel9);
             this.Controls.Add(this.timer2_showWindowsToast);
@@ -650,6 +913,22 @@
         private MetroFramework.Controls.MetroCheckBox timer2_showWindowsToast;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroLabel metroLabel10;
+        private MetroFramework.Controls.MetroLabel timer1_days;
+        private MetroFramework.Controls.MetroLabel metroLabel12;
+        private MetroFramework.Controls.MetroLabel timer1_hours;
+        private MetroFramework.Controls.MetroLabel timer1_minutes;
+        private MetroFramework.Controls.MetroLabel metroLabel15;
+        private MetroFramework.Controls.MetroLabel metroLabel16;
+        private MetroFramework.Controls.MetroLabel metroLabel17;
+        private MetroFramework.Controls.MetroLabel timer1_seconds;
+        private MetroFramework.Controls.MetroLabel metroLabel11;
+        private MetroFramework.Controls.MetroLabel timer2_seconds;
+        private MetroFramework.Controls.MetroLabel metroLabel20;
+        private MetroFramework.Controls.MetroLabel metroLabel21;
+        private MetroFramework.Controls.MetroLabel timer2_minutes;
+        private MetroFramework.Controls.MetroLabel timer2_hours;
+        private MetroFramework.Controls.MetroLabel metroLabel24;
+        private MetroFramework.Controls.MetroLabel timer2_days;
     }
 }
 
