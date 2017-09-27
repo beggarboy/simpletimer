@@ -123,7 +123,7 @@
             this.startTimer1.UseCustomBackColor = true;
             this.startTimer1.UseSelectable = true;
             this.startTimer1.UseStyleColors = true;
-            this.startTimer1.Click += new System.EventHandler(this.cmdTimer1_Click);
+            this.startTimer1.Click += new System.EventHandler(this.startTimer1_Click);
             // 
             // startTimer2
             // 
@@ -138,7 +138,7 @@
             this.startTimer2.UseCustomBackColor = true;
             this.startTimer2.UseSelectable = true;
             this.startTimer2.UseStyleColors = true;
-            this.startTimer2.Click += new System.EventHandler(this.cmdTimer2_Click);
+            this.startTimer2.Click += new System.EventHandler(this.startTimer2_Click);
             // 
             // timer2_timepassed
             // 
@@ -164,7 +164,7 @@
             this.setTimeTimer1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.setTimeTimer1.UseCustomBackColor = true;
             this.setTimeTimer1.UseSelectable = true;
-            this.setTimeTimer1.Click += new System.EventHandler(this.cmdSetTime1_Click);
+            this.setTimeTimer1.Click += new System.EventHandler(this.setTimeTimer1_Click);
             // 
             // setTimeTimer2
             // 
@@ -176,7 +176,7 @@
             this.setTimeTimer2.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.setTimeTimer2.UseCustomBackColor = true;
             this.setTimeTimer2.UseSelectable = true;
-            this.setTimeTimer2.Click += new System.EventHandler(this.cmdSetTime2_Click);
+            this.setTimeTimer2.Click += new System.EventHandler(this.setTimeTimer2_Click);
             // 
             // time1_days
             // 
