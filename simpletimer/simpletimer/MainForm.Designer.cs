@@ -34,8 +34,6 @@
             this.startTimer1 = new MetroFramework.Controls.MetroButton();
             this.startTimer2 = new MetroFramework.Controls.MetroButton();
             this.timer2_timepassed = new MetroFramework.Controls.MetroLabel();
-            this.setTimeTimer1 = new MetroFramework.Controls.MetroButton();
-            this.setTimeTimer2 = new MetroFramework.Controls.MetroButton();
             this.time1_days = new MetroFramework.Controls.MetroTextBox();
             this.time1_hours = new MetroFramework.Controls.MetroTextBox();
             this.time1_minutes = new MetroFramework.Controls.MetroTextBox();
@@ -50,10 +48,10 @@
             this.time2_minutes = new MetroFramework.Controls.MetroTextBox();
             this.time2_hours = new MetroFramework.Controls.MetroTextBox();
             this.time2_days = new MetroFramework.Controls.MetroTextBox();
-            this.timer1_playsound = new MetroFramework.Controls.MetroCheckBox();
-            this.timer2_playsound = new MetroFramework.Controls.MetroCheckBox();
-            this.timer1_showWindowsToast = new MetroFramework.Controls.MetroCheckBox();
-            this.timer2_showWindowsToast = new MetroFramework.Controls.MetroCheckBox();
+            this.timer1_optionPlaySound = new MetroFramework.Controls.MetroCheckBox();
+            this.timer2_optionPlaySound = new MetroFramework.Controls.MetroCheckBox();
+            this.timer1_optionShowWindowsToast = new MetroFramework.Controls.MetroCheckBox();
+            this.timer2_optionShowWindowsToast = new MetroFramework.Controls.MetroCheckBox();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.timer1_days = new MetroFramework.Controls.MetroLabel();
@@ -72,6 +70,8 @@
             this.timer2_hours = new MetroFramework.Controls.MetroLabel();
             this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
             this.timer2_days = new MetroFramework.Controls.MetroLabel();
+            this.timer1_optionShowMessageBox = new MetroFramework.Controls.MetroCheckBox();
+            this.timer2_optionShowMessageBox = new MetroFramework.Controls.MetroCheckBox();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -90,9 +90,9 @@
             // 
             this.timer1_timepassed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.timer1_timepassed.ForeColor = System.Drawing.SystemColors.Control;
-            this.timer1_timepassed.Location = new System.Drawing.Point(164, 400);
+            this.timer1_timepassed.Location = new System.Drawing.Point(141, 400);
             this.timer1_timepassed.Name = "timer1_timepassed";
-            this.timer1_timepassed.Size = new System.Drawing.Size(79, 19);
+            this.timer1_timepassed.Size = new System.Drawing.Size(115, 19);
             this.timer1_timepassed.Style = MetroFramework.MetroColorStyle.Orange;
             this.timer1_timepassed.TabIndex = 2;
             this.timer1_timepassed.Text = "- - -";
@@ -144,39 +144,15 @@
             // 
             this.timer2_timepassed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.timer2_timepassed.ForeColor = System.Drawing.SystemColors.Control;
-            this.timer2_timepassed.Location = new System.Drawing.Point(399, 400);
+            this.timer2_timepassed.Location = new System.Drawing.Point(393, 400);
             this.timer2_timepassed.Name = "timer2_timepassed";
-            this.timer2_timepassed.Size = new System.Drawing.Size(75, 19);
+            this.timer2_timepassed.Size = new System.Drawing.Size(115, 19);
             this.timer2_timepassed.Style = MetroFramework.MetroColorStyle.Orange;
             this.timer2_timepassed.TabIndex = 6;
             this.timer2_timepassed.Text = "- - -";
             this.timer2_timepassed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.timer2_timepassed.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.timer2_timepassed.UseStyleColors = true;
-            // 
-            // setTimeTimer1
-            // 
-            this.setTimeTimer1.Location = new System.Drawing.Point(181, 63);
-            this.setTimeTimer1.Name = "setTimeTimer1";
-            this.setTimeTimer1.Size = new System.Drawing.Size(75, 23);
-            this.setTimeTimer1.TabIndex = 9;
-            this.setTimeTimer1.Text = "Set";
-            this.setTimeTimer1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.setTimeTimer1.UseCustomBackColor = true;
-            this.setTimeTimer1.UseSelectable = true;
-            this.setTimeTimer1.Click += new System.EventHandler(this.setTimeTimer1_Click);
-            // 
-            // setTimeTimer2
-            // 
-            this.setTimeTimer2.Location = new System.Drawing.Point(433, 61);
-            this.setTimeTimer2.Name = "setTimeTimer2";
-            this.setTimeTimer2.Size = new System.Drawing.Size(75, 23);
-            this.setTimeTimer2.TabIndex = 10;
-            this.setTimeTimer2.Text = "Set";
-            this.setTimeTimer2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.setTimeTimer2.UseCustomBackColor = true;
-            this.setTimeTimer2.UseSelectable = true;
-            this.setTimeTimer2.Click += new System.EventHandler(this.setTimeTimer2_Click);
             // 
             // time1_days
             // 
@@ -193,7 +169,7 @@
             this.time1_days.CustomButton.UseSelectable = true;
             this.time1_days.CustomButton.Visible = false;
             this.time1_days.Lines = new string[0];
-            this.time1_days.Location = new System.Drawing.Point(23, 63);
+            this.time1_days.Location = new System.Drawing.Point(64, 63);
             this.time1_days.MaxLength = 32767;
             this.time1_days.Name = "time1_days";
             this.time1_days.PasswordChar = '\0';
@@ -226,7 +202,7 @@
             this.time1_hours.CustomButton.UseSelectable = true;
             this.time1_hours.CustomButton.Visible = false;
             this.time1_hours.Lines = new string[0];
-            this.time1_hours.Location = new System.Drawing.Point(63, 63);
+            this.time1_hours.Location = new System.Drawing.Point(104, 63);
             this.time1_hours.MaxLength = 32767;
             this.time1_hours.Name = "time1_hours";
             this.time1_hours.PasswordChar = '\0';
@@ -259,7 +235,7 @@
             this.time1_minutes.CustomButton.UseSelectable = true;
             this.time1_minutes.CustomButton.Visible = false;
             this.time1_minutes.Lines = new string[0];
-            this.time1_minutes.Location = new System.Drawing.Point(103, 63);
+            this.time1_minutes.Location = new System.Drawing.Point(144, 63);
             this.time1_minutes.MaxLength = 32767;
             this.time1_minutes.Name = "time1_minutes";
             this.time1_minutes.PasswordChar = '\0';
@@ -292,7 +268,7 @@
             this.time1_seconds.CustomButton.UseSelectable = true;
             this.time1_seconds.CustomButton.Visible = false;
             this.time1_seconds.Lines = new string[0];
-            this.time1_seconds.Location = new System.Drawing.Point(141, 63);
+            this.time1_seconds.Location = new System.Drawing.Point(182, 63);
             this.time1_seconds.MaxLength = 32767;
             this.time1_seconds.Name = "time1_seconds";
             this.time1_seconds.PasswordChar = '\0';
@@ -313,7 +289,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(54, 65);
+            this.metroLabel3.Location = new System.Drawing.Point(95, 65);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(12, 19);
             this.metroLabel3.Style = MetroFramework.MetroColorStyle.Orange;
@@ -325,7 +301,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(94, 65);
+            this.metroLabel5.Location = new System.Drawing.Point(135, 65);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(12, 19);
             this.metroLabel5.Style = MetroFramework.MetroColorStyle.Orange;
@@ -337,7 +313,7 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(133, 65);
+            this.metroLabel6.Location = new System.Drawing.Point(174, 65);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(12, 19);
             this.metroLabel6.Style = MetroFramework.MetroColorStyle.Orange;
@@ -349,7 +325,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(385, 63);
+            this.metroLabel2.Location = new System.Drawing.Point(426, 63);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(12, 19);
             this.metroLabel2.Style = MetroFramework.MetroColorStyle.Orange;
@@ -361,7 +337,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(346, 63);
+            this.metroLabel7.Location = new System.Drawing.Point(387, 63);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(12, 19);
             this.metroLabel7.Style = MetroFramework.MetroColorStyle.Orange;
@@ -373,7 +349,7 @@
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(306, 63);
+            this.metroLabel8.Location = new System.Drawing.Point(347, 63);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(12, 19);
             this.metroLabel8.Style = MetroFramework.MetroColorStyle.Orange;
@@ -397,7 +373,7 @@
             this.time2_seconds.CustomButton.UseSelectable = true;
             this.time2_seconds.CustomButton.Visible = false;
             this.time2_seconds.Lines = new string[0];
-            this.time2_seconds.Location = new System.Drawing.Point(393, 61);
+            this.time2_seconds.Location = new System.Drawing.Point(434, 61);
             this.time2_seconds.MaxLength = 32767;
             this.time2_seconds.Name = "time2_seconds";
             this.time2_seconds.PasswordChar = '\0';
@@ -430,7 +406,7 @@
             this.time2_minutes.CustomButton.UseSelectable = true;
             this.time2_minutes.CustomButton.Visible = false;
             this.time2_minutes.Lines = new string[0];
-            this.time2_minutes.Location = new System.Drawing.Point(355, 61);
+            this.time2_minutes.Location = new System.Drawing.Point(396, 61);
             this.time2_minutes.MaxLength = 32767;
             this.time2_minutes.Name = "time2_minutes";
             this.time2_minutes.PasswordChar = '\0';
@@ -463,7 +439,7 @@
             this.time2_hours.CustomButton.UseSelectable = true;
             this.time2_hours.CustomButton.Visible = false;
             this.time2_hours.Lines = new string[0];
-            this.time2_hours.Location = new System.Drawing.Point(315, 61);
+            this.time2_hours.Location = new System.Drawing.Point(356, 61);
             this.time2_hours.MaxLength = 32767;
             this.time2_hours.Name = "time2_hours";
             this.time2_hours.PasswordChar = '\0';
@@ -496,7 +472,7 @@
             this.time2_days.CustomButton.UseSelectable = true;
             this.time2_days.CustomButton.Visible = false;
             this.time2_days.Lines = new string[0];
-            this.time2_days.Location = new System.Drawing.Point(275, 61);
+            this.time2_days.Location = new System.Drawing.Point(316, 61);
             this.time2_days.MaxLength = 32767;
             this.time2_days.Name = "time2_days";
             this.time2_days.PasswordChar = '\0';
@@ -514,59 +490,61 @@
             this.time2_days.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.time2_days.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // timer1_playsound
+            // timer1_optionPlaySound
             // 
-            this.timer1_playsound.AutoSize = true;
-            this.timer1_playsound.Location = new System.Drawing.Point(23, 129);
-            this.timer1_playsound.Name = "timer1_playsound";
-            this.timer1_playsound.Size = new System.Drawing.Size(82, 15);
-            this.timer1_playsound.Style = MetroFramework.MetroColorStyle.Orange;
-            this.timer1_playsound.TabIndex = 29;
-            this.timer1_playsound.Text = "Play Sound";
-            this.timer1_playsound.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.timer1_playsound.UseCustomBackColor = true;
-            this.timer1_playsound.UseSelectable = true;
-            this.timer1_playsound.CheckedChanged += new System.EventHandler(this.timer1_playsound_CheckedChanged);
+            this.timer1_optionPlaySound.AutoSize = true;
+            this.timer1_optionPlaySound.Location = new System.Drawing.Point(23, 129);
+            this.timer1_optionPlaySound.Name = "timer1_optionPlaySound";
+            this.timer1_optionPlaySound.Size = new System.Drawing.Size(82, 15);
+            this.timer1_optionPlaySound.Style = MetroFramework.MetroColorStyle.Orange;
+            this.timer1_optionPlaySound.TabIndex = 29;
+            this.timer1_optionPlaySound.Text = "Play Sound";
+            this.timer1_optionPlaySound.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.timer1_optionPlaySound.UseCustomBackColor = true;
+            this.timer1_optionPlaySound.UseSelectable = true;
+            this.timer1_optionPlaySound.CheckedChanged += new System.EventHandler(this.timer1_optionPlaySound_CheckedChanged);
             // 
-            // timer2_playsound
+            // timer2_optionPlaySound
             // 
-            this.timer2_playsound.AutoSize = true;
-            this.timer2_playsound.Location = new System.Drawing.Point(276, 129);
-            this.timer2_playsound.Name = "timer2_playsound";
-            this.timer2_playsound.Size = new System.Drawing.Size(82, 15);
-            this.timer2_playsound.Style = MetroFramework.MetroColorStyle.Orange;
-            this.timer2_playsound.TabIndex = 30;
-            this.timer2_playsound.Text = "Play Sound";
-            this.timer2_playsound.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.timer2_playsound.UseCustomBackColor = true;
-            this.timer2_playsound.UseSelectable = true;
-            this.timer2_playsound.CheckedChanged += new System.EventHandler(this.timer2_playsound_CheckedChanged);
+            this.timer2_optionPlaySound.AutoSize = true;
+            this.timer2_optionPlaySound.Location = new System.Drawing.Point(276, 129);
+            this.timer2_optionPlaySound.Name = "timer2_optionPlaySound";
+            this.timer2_optionPlaySound.Size = new System.Drawing.Size(82, 15);
+            this.timer2_optionPlaySound.Style = MetroFramework.MetroColorStyle.Orange;
+            this.timer2_optionPlaySound.TabIndex = 30;
+            this.timer2_optionPlaySound.Text = "Play Sound";
+            this.timer2_optionPlaySound.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.timer2_optionPlaySound.UseCustomBackColor = true;
+            this.timer2_optionPlaySound.UseSelectable = true;
+            this.timer2_optionPlaySound.CheckedChanged += new System.EventHandler(this.timer2_optionPlaySound_CheckedChanged);
             // 
-            // timer1_showWindowsToast
+            // timer1_optionShowWindowsToast
             // 
-            this.timer1_showWindowsToast.AutoSize = true;
-            this.timer1_showWindowsToast.Location = new System.Drawing.Point(23, 150);
-            this.timer1_showWindowsToast.Name = "timer1_showWindowsToast";
-            this.timer1_showWindowsToast.Size = new System.Drawing.Size(135, 15);
-            this.timer1_showWindowsToast.Style = MetroFramework.MetroColorStyle.Orange;
-            this.timer1_showWindowsToast.TabIndex = 31;
-            this.timer1_showWindowsToast.Text = "Show Windows Toast";
-            this.timer1_showWindowsToast.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.timer1_showWindowsToast.UseCustomBackColor = true;
-            this.timer1_showWindowsToast.UseSelectable = true;
+            this.timer1_optionShowWindowsToast.AutoSize = true;
+            this.timer1_optionShowWindowsToast.Location = new System.Drawing.Point(23, 150);
+            this.timer1_optionShowWindowsToast.Name = "timer1_optionShowWindowsToast";
+            this.timer1_optionShowWindowsToast.Size = new System.Drawing.Size(135, 15);
+            this.timer1_optionShowWindowsToast.Style = MetroFramework.MetroColorStyle.Orange;
+            this.timer1_optionShowWindowsToast.TabIndex = 31;
+            this.timer1_optionShowWindowsToast.Text = "Show Windows Toast";
+            this.timer1_optionShowWindowsToast.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.timer1_optionShowWindowsToast.UseCustomBackColor = true;
+            this.timer1_optionShowWindowsToast.UseSelectable = true;
+            this.timer1_optionShowWindowsToast.CheckedChanged += new System.EventHandler(this.timer1_optionShowWindowsToast_CheckedChanged);
             // 
-            // timer2_showWindowsToast
+            // timer2_optionShowWindowsToast
             // 
-            this.timer2_showWindowsToast.AutoSize = true;
-            this.timer2_showWindowsToast.Location = new System.Drawing.Point(276, 150);
-            this.timer2_showWindowsToast.Name = "timer2_showWindowsToast";
-            this.timer2_showWindowsToast.Size = new System.Drawing.Size(135, 15);
-            this.timer2_showWindowsToast.Style = MetroFramework.MetroColorStyle.Orange;
-            this.timer2_showWindowsToast.TabIndex = 32;
-            this.timer2_showWindowsToast.Text = "Show Windows Toast";
-            this.timer2_showWindowsToast.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.timer2_showWindowsToast.UseCustomBackColor = true;
-            this.timer2_showWindowsToast.UseSelectable = true;
+            this.timer2_optionShowWindowsToast.AutoSize = true;
+            this.timer2_optionShowWindowsToast.Location = new System.Drawing.Point(276, 150);
+            this.timer2_optionShowWindowsToast.Name = "timer2_optionShowWindowsToast";
+            this.timer2_optionShowWindowsToast.Size = new System.Drawing.Size(135, 15);
+            this.timer2_optionShowWindowsToast.Style = MetroFramework.MetroColorStyle.Orange;
+            this.timer2_optionShowWindowsToast.TabIndex = 32;
+            this.timer2_optionShowWindowsToast.Text = "Show Windows Toast";
+            this.timer2_optionShowWindowsToast.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.timer2_optionShowWindowsToast.UseCustomBackColor = true;
+            this.timer2_optionShowWindowsToast.UseSelectable = true;
+            this.timer2_optionShowWindowsToast.CheckedChanged += new System.EventHandler(this.timer2_optionShowWindowsToast_CheckedChanged);
             // 
             // metroLabel9
             // 
@@ -824,11 +802,41 @@
             this.timer2_days.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.timer2_days.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
+            // timer1_optionShowMessageBox
+            // 
+            this.timer1_optionShowMessageBox.AutoSize = true;
+            this.timer1_optionShowMessageBox.Location = new System.Drawing.Point(23, 171);
+            this.timer1_optionShowMessageBox.Name = "timer1_optionShowMessageBox";
+            this.timer1_optionShowMessageBox.Size = new System.Drawing.Size(123, 15);
+            this.timer1_optionShowMessageBox.Style = MetroFramework.MetroColorStyle.Orange;
+            this.timer1_optionShowMessageBox.TabIndex = 53;
+            this.timer1_optionShowMessageBox.Text = "Show Message Box";
+            this.timer1_optionShowMessageBox.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.timer1_optionShowMessageBox.UseCustomBackColor = true;
+            this.timer1_optionShowMessageBox.UseSelectable = true;
+            this.timer1_optionShowMessageBox.CheckedChanged += new System.EventHandler(this.timer1_optionShowMessageBox_CheckedChanged);
+            // 
+            // timer2_optionShowMessageBox
+            // 
+            this.timer2_optionShowMessageBox.AutoSize = true;
+            this.timer2_optionShowMessageBox.Location = new System.Drawing.Point(276, 171);
+            this.timer2_optionShowMessageBox.Name = "timer2_optionShowMessageBox";
+            this.timer2_optionShowMessageBox.Size = new System.Drawing.Size(123, 15);
+            this.timer2_optionShowMessageBox.Style = MetroFramework.MetroColorStyle.Orange;
+            this.timer2_optionShowMessageBox.TabIndex = 54;
+            this.timer2_optionShowMessageBox.Text = "Show Message Box";
+            this.timer2_optionShowMessageBox.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.timer2_optionShowMessageBox.UseCustomBackColor = true;
+            this.timer2_optionShowMessageBox.UseSelectable = true;
+            this.timer2_optionShowMessageBox.CheckedChanged += new System.EventHandler(this.timer2_optionShowMessageBox_CheckedChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 439);
+            this.Controls.Add(this.timer2_optionShowMessageBox);
+            this.Controls.Add(this.timer1_optionShowMessageBox);
             this.Controls.Add(this.metroLabel11);
             this.Controls.Add(this.timer2_seconds);
             this.Controls.Add(this.metroLabel20);
@@ -847,10 +855,10 @@
             this.Controls.Add(this.timer1_days);
             this.Controls.Add(this.metroLabel10);
             this.Controls.Add(this.metroLabel9);
-            this.Controls.Add(this.timer2_showWindowsToast);
-            this.Controls.Add(this.timer1_showWindowsToast);
-            this.Controls.Add(this.timer2_playsound);
-            this.Controls.Add(this.timer1_playsound);
+            this.Controls.Add(this.timer2_optionShowWindowsToast);
+            this.Controls.Add(this.timer1_optionShowWindowsToast);
+            this.Controls.Add(this.timer2_optionPlaySound);
+            this.Controls.Add(this.timer1_optionPlaySound);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel7);
             this.Controls.Add(this.metroLabel8);
@@ -864,8 +872,6 @@
             this.Controls.Add(this.time1_seconds);
             this.Controls.Add(this.time1_minutes);
             this.Controls.Add(this.time1_hours);
-            this.Controls.Add(this.setTimeTimer2);
-            this.Controls.Add(this.setTimeTimer1);
             this.Controls.Add(this.time1_days);
             this.Controls.Add(this.timer2_timepassed);
             this.Controls.Add(this.startTimer2);
@@ -877,7 +883,7 @@
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Simple Timer";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -891,8 +897,6 @@
         private MetroFramework.Controls.MetroButton startTimer1;
         private MetroFramework.Controls.MetroButton startTimer2;
         private MetroFramework.Controls.MetroLabel timer2_timepassed;
-        private MetroFramework.Controls.MetroButton setTimeTimer1;
-        private MetroFramework.Controls.MetroButton setTimeTimer2;
         private MetroFramework.Controls.MetroTextBox time1_days;
         private MetroFramework.Controls.MetroTextBox time1_hours;
         private MetroFramework.Controls.MetroTextBox time1_minutes;
@@ -907,10 +911,10 @@
         private MetroFramework.Controls.MetroTextBox time2_minutes;
         private MetroFramework.Controls.MetroTextBox time2_hours;
         private MetroFramework.Controls.MetroTextBox time2_days;
-        private MetroFramework.Controls.MetroCheckBox timer1_playsound;
-        private MetroFramework.Controls.MetroCheckBox timer2_playsound;
-        private MetroFramework.Controls.MetroCheckBox timer1_showWindowsToast;
-        private MetroFramework.Controls.MetroCheckBox timer2_showWindowsToast;
+        private MetroFramework.Controls.MetroCheckBox timer1_optionPlaySound;
+        private MetroFramework.Controls.MetroCheckBox timer2_optionPlaySound;
+        private MetroFramework.Controls.MetroCheckBox timer1_optionShowWindowsToast;
+        private MetroFramework.Controls.MetroCheckBox timer2_optionShowWindowsToast;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroLabel timer1_days;
@@ -929,6 +933,8 @@
         private MetroFramework.Controls.MetroLabel timer2_hours;
         private MetroFramework.Controls.MetroLabel metroLabel24;
         private MetroFramework.Controls.MetroLabel timer2_days;
+        private MetroFramework.Controls.MetroCheckBox timer1_optionShowMessageBox;
+        private MetroFramework.Controls.MetroCheckBox timer2_optionShowMessageBox;
     }
 }
 
